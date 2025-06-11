@@ -1,0 +1,26 @@
+/* Results Page Styles */
+.results {
+  max-width: 500px;
+  margin: 50px auto;
+  text-align: center;
+  font-size: 1.6rem;
+  color: #333;
+}
+
+.results p {
+  font-weight: bold;
+  font-size: 1.8rem;
+  color: #28a745;
+}
+
+.results a {
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: #007BFF;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.results a:hover {
+  color: #0056b3;
+}

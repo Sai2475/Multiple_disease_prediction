@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Disease Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f8fa;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .result-container {
+            max-width: 600px;
+            margin: auto;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .verdict {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .advice {
+            font-size: 1rem;
+            color: #444;
+            margin-bottom: 30px;
+        }
+
+        .safe {
+            color: green;
+        }
+
+        .danger {
+            color: red;
+        }
+
+        a.button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        a.button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-container">
+        <h2>Heart Disease Prediction Result</h2>
+
+        {% if result == 0 %}
+            <p class="verdict safe">You do <strong>not</strong> have heart disease. 🎉</p>
+            <div class="advice">
+                Keep up the good work! Maintain a healthy lifestyle by eating nutritious food,
+                exercising regularly, avoiding tobacco, and managing stress. Schedule routine
+                checkups to stay on track.
+            </div>
+        {% else %}
+            <p class="verdict danger">Warning: You may have heart disease. ⚠️</p>
+            <div class="advice">
+                It's important to consult a cardiologist immediately. In the meantime, avoid
+                high-cholesterol foods, reduce salt intake, quit smoking if applicable, and
+                monitor your blood pressure and cholesterol levels regularly.
+            </div>
+        {% endif %}
+
+        <a href="{{ url_for('dashboard') }}" class="button">Back to Dashboard</a>
+    </div>
+</body>
+</html>

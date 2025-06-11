@@ -1,0 +1,240 @@
+/* Reset and Fonts */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: url('https://www.transparenttextures.com/patterns/cubes.png'), linear-gradient(135deg, #e3f2fd, #bbdefb);
+  background-size: cover;
+  background-attachment: fixed;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 74, 173, 0.95);
+  color: white;
+  padding: 20px 40px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo h2 {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.navbar .nav-links a {
+  margin-left: 20px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+
+.navbar .nav-links a:hover {
+  color: #ffda44;
+}
+
+/* Main Content */
+.main-content {
+  text-align: center;
+  padding: 60px 20px 40px;
+}
+
+.main-content h3 {
+  font-size: 2.2rem;
+  color: #0d47a1;
+}
+
+.intro {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 50px;
+}
+
+/* Cards Layout */
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Card Styling */
+.card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  padding: 30px;
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: float 3s ease-in-out infinite;
+}
+
+.card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* Heart and Diabetes Color Tags */
+.card.heart {
+  border-top: 6px solid #e53935;
+}
+
+.card.diabetes {
+  border-top: 6px solid #43a047;
+}
+
+/* Titles and Descriptions */
+.card h4 {
+  font-size: 1.4rem;
+  color: #263238;
+  margin-bottom: 12px;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Action Buttons */
+.action-btn {
+  padding: 12px 22px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.action-btn.red {
+  background-color: #e53935;
+}
+
+.action-btn.red:hover {
+  background-color: #c62828;
+  transform: scale(1.05);
+}
+
+.action-btn.green {
+  background-color: #43a047;
+}
+
+.action-btn.green:hover {
+  background-color: #2e7d32;
+  transform: scale(1.05);
+}
+
+/* Float animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .card-container {
+      flex-direction: column;
+      align-items: center;
+  }
+}
+/* Informational Section */
+.info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 40px 60px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.info-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 1s ease;
+  transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-8px);
+}
+
+.info-card h2 {
+  font-size: 1.8rem;
+  color: #0d47a1;
+  margin-bottom: 15px;
+}
+
+.info-card.heart {
+  border-left: 6px solid #e53935;
+}
+
+.info-card.diabetes {
+  border-left: 6px solid #43a047;
+}
+
+.info-card ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.fact {
+  margin-top: 15px;
+  font-style: italic;
+  color: #333;
+  background: #e3f2fd;
+  padding: 10px;
+  border-left: 4px solid #42a5f5;
+  border-radius: 4px;
+}
+
+/* Call-to-Action */
+.cta {
+  text-align: center;
+  padding: 40px 20px 60px;
+  background: linear-gradient(to right, #2196f3, #64b5f6);
+  color: white;
+}
+
+.cta h3 {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+}
+
+.cta-btn {
+  background-color: #ffffff;
+  color: #1565c0;
+  font-size: 1rem;
+  padding: 14px 26px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.cta-btn:hover {
+  background-color: #f1f1f1;
+  transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+

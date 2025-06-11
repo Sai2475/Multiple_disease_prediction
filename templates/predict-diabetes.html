@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Diabetes Prediction</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <header class="hero green">
+    <div class="hero-content">
+      <h1>Diabetes Prediction</h1>
+      <p>Fill in the details below to assess your diabetes risk</p>
+    </div>
+  </header>
+
+  <section class="form-section">
+    <form action="{{ url_for('predict_diabetes') }}" method="post" class="predict-form">
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="pregnancies">Pregnancies</label>
+          <input type="number" name="pregnancies" required />
+        </div>
+        <div class="form-group">
+          <label for="glucose">Glucose Level</label>
+          <input type="number" name="glucose" required />
+        </div>
+        <div class="form-group">
+          <label for="bp">Blood Pressure</label>
+          <input type="number" name="bp" required />
+        </div>
+        <div class="form-group">
+          <label for="skin_thickness">Skin Thickness</label>
+          <input type="number" name="skin_thickness" required />
+        </div>
+        <div class="form-group">
+          <label for="insulin">Insulin</label>
+          <input type="number" name="insulin" required />
+        </div>
+        <div class="form-group">
+          <label for="bmi">BMI</label>
+          <input type="number" step="0.1" name="bmi" required />
+        </div>
+        <div class="form-group">
+          <label for="dpf">Diabetes Pedigree Function</label>
+          <input type="number" step="0.01" name="dpf" required />
+        </div>
+        <div class="form-group">
+          <label for="age">Age</label>
+          <input type="number" name="age" required />
+        </div>
+      </div>
+      <button type="submit" class="btn primary full">Predict</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 MEDISENSE</p>
+  </footer>
+</body>
+</html>

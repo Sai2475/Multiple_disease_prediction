@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e6f9ee;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .result-container {
+            max-width: 600px;
+            margin: auto;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+        }
+
+        h2 {
+            color: #2f7a4f;
+            margin-bottom: 20px;
+        }
+
+        .verdict {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .advice {
+            font-size: 1rem;
+            color: #444;
+            margin-bottom: 30px;
+        }
+
+        .safe {
+            color: green;
+        }
+
+        .danger {
+            color: #c0392b;
+        }
+
+        a.button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #2f7a4f;
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        a.button:hover {
+            background-color: #1e5735;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-container">
+        <h2>Diabetes Prediction Result</h2>
+
+        {% if result == 0 %}
+            <p class="verdict safe">You do <strong>not</strong> have diabetes. 🎉</p>
+            <div class="advice">
+                Great job! Stay healthy by continuing to eat a balanced diet, staying physically active,
+                keeping your weight in check, and doing regular medical checkups.
+            </div>
+        {% else %}
+            <p class="verdict danger">Warning: You may have diabetes. ⚠️</p>
+            <div class="advice">
+                Please consult a healthcare provider for further testing and confirmation.
+                Begin managing your sugar levels with a healthy diet, regular exercise, stress control,
+                and if prescribed, medications. Early intervention can prevent complications.
+            </div>
+        {% endif %}
+
+        <a href="{{ url_for('dashboard') }}" class="button">Back to Dashboard</a>
+    </div>
+</body>
+</html>

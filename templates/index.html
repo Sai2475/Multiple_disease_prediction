@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MediSense | AI Disease Prediction</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <script defer src="{{ url_for('static', filename='js/script.js') }}"></script>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-content">
+      <h1 class="animated-title">MEDISENSE 🩺</h1>
+      <p class="subtitle">Your intelligent health companion to predict and prevent diseases early.</p>
+      <p class="highlight">We combine the power of AI with healthcare insights to predict diabetes and heart disease in seconds.</p>
+      <div class="cta-buttons">
+        <a href="{{ url_for('login') }}" class="btn primary">Login</a>
+        <a href="{{ url_for('signup') }}" class="btn secondary">Sign Up</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="features">
+    <h2>What You Can Do</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>🫀 Heart Disease Prediction</h3>
+        <p>Answer a few questions to assess your risk for heart disease using our trained ML model.</p>
+        <a href="{{ url_for('select_disease') }}" class="card-btn">Check Now</a>
+      </div>
+      <div class="card">
+        <h3>🩸 Diabetes Risk Analysis</h3>
+        <p>Use data-driven insights to evaluate your risk of diabetes in just a few clicks.</p>
+        <a href="{{ url_for('select_disease') }}" class="card-btn">Check Now</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="how-it-works">
+    <h2>How It Works</h2>
+    <div class="steps">
+      <div class="step">
+        <h4>1. Sign Up / Login</h4>
+        <p>Create your account or log in to get started with predictions.</p>
+      </div>
+      <div class="step">
+        <h4>2. Choose Disease</h4>
+        <p>Select from heart disease or diabetes and provide your health data securely.</p>
+      </div>
+      <div class="step">
+        <h4>3. Get Instant Results</h4>
+        <p>Our AI analyzes your data and provides real-time health predictions.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Prediction Stats Section (Moved) -->
+  <section>
+    <div class="prediction-stats">
+      <h3>Model Prediction Accuracy 💻</h3>
+      <p><strong>Heart Disease Prediction:</strong> 87% </p>
+      <p><strong>Diabetes Risk Analysis:</strong> 89% </p>
+    </div>
+  </section>
+
+  <section class="why-us">
+    <h2>Why Choose MediSense?</h2>
+    <div class="points">
+      <div class="point">
+        <h4>✅ Fast and Accurate</h4>
+        <p>Powered by trained AI models for reliable predictions every time.</p>
+      </div>
+      <div class="point">
+        <h4>🔒 Secure and Private</h4>
+        <p>We ensure your medical data remains confidential and secure.</p>
+      </div>
+      <div class="point">
+        <h4>🌐 Accessible Anywhere</h4>
+        <p>All you need is a browser – no installs, no hassle.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 MediSense | AI Disease Prediction | Made with ❤️ by Team SAN</p>
+  </footer>
+</body>
+</html>

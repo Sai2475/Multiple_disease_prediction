@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Disease</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/select-disease.css') }}">
+</head>
+<body>
+    <div class="header">
+        <h1>🧠 Select a Disease for Prediction</h1>
+        <p>Choose the health condition you want to predict using our intelligent system.</p>
+    </div>
+
+    <div class="select-disease-container">
+        <div class="card red-card">
+            <h3>Heart Disease</h3>
+            <p>Check for symptoms and predict your heart health.</p>
+            <a href="{{ url_for('predict_heart') }}">Predict Heart Disease</a>
+        </div>
+
+        <div class="card green-card">
+            <h3>Diabetes</h3>
+            <p>Check your sugar levels and predict diabetes risk.</p>
+            <a href="{{ url_for('predict_diabetes') }}">Predict Diabetes</a>
+        </div>
+    </div>
+</body>
+</html>

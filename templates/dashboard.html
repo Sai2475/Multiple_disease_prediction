@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard - Disease Prediction</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+</head>
+<body>
+  <div class="navbar">
+    <div class="logo">
+      <h2>🩺 MEDISENSE </h2>
+    </div>
+    <div class="nav-links">
+      <a href="/select-disease" id="select-disease-link">Select Disease</a>
+      <a href="/" id="logout-button">Logout</a>
+    </div>
+  </div>
+
+  <div class="main-content">
+    <h3>Welcome to Your MediSenese Dashboard</h3>
+    <p class="intro">Learn about chronic diseases, stay informed, and take the next step with AI-powered predictions.</p>
+
+    <section class="info-section">
+      <div class="info-card heart">
+        <h2>❤️ Heart Disease</h2>
+        <p><strong>Heart disease</strong> refers to several types of heart conditions, including coronary artery disease and heart attacks.</p>
+        <ul>
+          <li><strong>Symptoms:</strong> Chest pain, shortness of breath, fatigue</li>
+          <li><strong>Risk Factors:</strong> Smoking, high blood pressure, high cholesterol, obesity</li>
+          <li><strong>Prevention:</strong> Exercise regularly, eat healthy, manage stress, get regular checkups</li>
+        </ul>
+        <p class="fact">🩺 <em>Cardiovascular disease is the leading cause of death globally.</em></p>
+      </div>
+
+      <div class="info-card diabetes">
+        <h2>💉 Diabetes</h2>
+        <p><strong>Diabetes</strong> is a chronic condition that affects how your body turns food into energy due to insulin issues.</p>
+        <ul>
+          <li><strong>Types:</strong> Type 1, Type 2, Gestational</li>
+          <li><strong>Symptoms:</strong> Excessive thirst, frequent urination, fatigue, blurry vision</li>
+          <li><strong>Prevention:</strong> Maintain a healthy weight, balanced diet, exercise, avoid smoking</li>
+        </ul>
+        <p class="fact">📊 <em>1 in 10 adults globally is living with diabetes.</em></p>
+      </div>
+    </section>
+
+    <div class="cta">
+      <h3>Ready to check your health status?</h3>
+      <a href="/select-disease">
+        <button class="cta-btn">Select Disease to Predict</button>
+      </a>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+  <script>new WOW().init();</script>
+</body>
+</html>
