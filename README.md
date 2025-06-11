@@ -29,3 +29,42 @@ This project is a full-stack web application for predicting **Heart Disease** an
 
 ## 🗃️ Project Structure
 
+dbms-project/
+│
+├── app.py # Main backend logic
+├── models/ # Machine learning models
+│ ├── heart_model.pkl
+│ └── diabetes_model.pkl
+│
+├── templates/ # HTML templates
+│ ├── login.html, signup.html, ...
+│
+├── static/ # CSS & JS files
+│ ├── css/
+│ └── js/
+│
+├── users.db # SQLite database
+└── README.md # You're reading it!
+
+yaml
+Copy
+Edit
+
+### To Add This:
+1. Create a file named `README.md` in your project folder.
+2. Paste the above content.
+3. Then commit and push it:
+
+```bash
+git add README.md
+git commit -m "Add project README"
+git push
+---
+
+## 🛠️ How to Run
+
+1. **Clone the repo**:
+   ```bash
+   git clone https://github.com/Sai2475/Multiple_disease_prediction.git
+   cd Multiple_disease_prediction
+
