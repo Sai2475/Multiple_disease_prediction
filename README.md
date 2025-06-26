@@ -46,25 +46,4 @@ dbms-project/
 ├── users.db # SQLite database
 └── README.md # You're reading it!
 
-yaml
-Copy
-Edit
-
-### To Add This:
-1. Create a file named `README.md` in your project folder.
-2. Paste the above content.
-3. Then commit and push it:
-
-```bash
-git add README.md
-git commit -m "Add project README"
-git push
----
-
-## 🛠️ How to Run
-
-1. **Clone the repo**:
-   ```bash
-   git clone https://github.com/Sai2475/Multiple_disease_prediction.git
-   cd Multiple_disease_prediction
 
